@@ -1,9 +1,9 @@
 from livereload import Server
-from app import app
+from flask_template import app
 
 app.debug = True
 server = Server(app.wsgi_app)
 
-server.watch("templates")
-server.watch("static")
+server.watch("flask_template/templates")
+server.watch("flask_template/static")
 server.serve()
